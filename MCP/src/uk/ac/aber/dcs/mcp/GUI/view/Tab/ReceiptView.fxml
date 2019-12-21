@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="receipt" alignment="TOP_CENTER" fillWidth="false" prefHeight="521.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.dcs.mcp.GUI.controller.ReceiptController">
+   <children>
+      <HBox prefHeight="521.0" prefWidth="760.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="521.0" prefWidth="450.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="69.0" prefWidth="350.0">
+                     <padding>
+                        <Insets top="30.0" />
+                     </padding>
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="115.0" text="Receipt Number" />
+                        <TextField fx:id="receiptNumberTextField" prefHeight="30.0" prefWidth="200.0" promptText="e.g. R0" />
+                     </children>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="71.0" prefWidth="350.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#searchForReceipt" prefHeight="15.0" prefWidth="74.0" text="Search" />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="207.0" prefWidth="350.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="receiptMessageLabel" />
+                        <TextArea fx:id="receiptTextArea" editable="false" prefHeight="176.0" prefWidth="250.0">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="521.0" prefWidth="310.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="351.0" prefWidth="310.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="requestParkingAssistanceButton" alignment="CENTER" mnemonicParsing="false" onAction="#requestParkingAssistance" prefHeight="50.0" prefWidth="200.0" text="Request Parking Assistance" />
+                        <Button fx:id="requestVehicleCollectionButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#requestVehicleCollection" prefHeight="50.0" prefWidth="200.0" text="Request Vehicle Collection" />
+                        <Button fx:id="exitCarparkButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#exitCarpark" prefHeight="50.0" prefWidth="200.0" text="Exit Carpark" />
+                        <Button fx:id="paymentButton" alignment="CENTER" layoutX="65.0" layoutY="178.0" mnemonicParsing="false" onAction="#initialisePayment" prefHeight="50.0" prefWidth="200.0" text="Start Payment" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="paymentSection" alignment="TOP_CENTER" disable="true" fillWidth="false" prefHeight="249.0" prefWidth="310.0" spacing="20.0">
+                     <children>
+                        <AnchorPane prefHeight="66.0" prefWidth="310.0">
+                           <children>
+                              <Label fx:id="totalAmountLabel" layoutX="69.0" layoutY="20.0" text="Label" />
+                              <Label fx:id="amountPaidLabel" layoutX="69.0" layoutY="42.0" text="Label" />
+                           </children>
+                        </AnchorPane>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="310.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="98.0" text="Enter Amount" />
+                              <TextField fx:id="amountTextField" onAction="#enterAmount" prefHeight="31.0" prefWidth="159.0" promptText="e.g. 1.5, 2" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="changeMessageLabel" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

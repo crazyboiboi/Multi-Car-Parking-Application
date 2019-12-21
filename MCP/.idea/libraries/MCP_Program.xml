@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MCP_Program">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MCP_Program/out/artifacts/MCP_Program_jar/MCP_Program.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

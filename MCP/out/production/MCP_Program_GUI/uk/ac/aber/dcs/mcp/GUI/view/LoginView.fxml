@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.dcs.mcp.GUI.controller.LoginController">
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="400.0" prefWidth="400.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="116.0" text="Login">
+               <font>
+                  <Font name="Arial Black" size="37.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="78.0" prefWidth="184.0">
+               <children>
+                  <Label prefHeight="41.0" prefWidth="83.0" text="Admin Code" />
+                  <PasswordField fx:id="code" onAction="#checkValidAdminCode" prefHeight="31.0" prefWidth="163.0" promptText="Enter code here" />
+                  <Label fx:id="invalidMessageLabel" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="58.0" prefWidth="145.0">
+               <children>
+                  <Label prefHeight="61.0" prefWidth="78.0" text="Not admin?" />
+                  <Button mnemonicParsing="false" onAction="#loadCustomerViewScene" text="Login as Customer" />
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="49.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="78.0" layoutY="66.0" mnemonicParsing="false" onAction="#exitApplication" text="Exit" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

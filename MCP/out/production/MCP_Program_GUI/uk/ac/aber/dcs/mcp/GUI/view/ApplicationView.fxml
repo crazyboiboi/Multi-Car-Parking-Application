@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.dcs.mcp.GUI.controller.ApplicationController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="525.0" prefWidth="760.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <tabs>
+            <Tab closable="false" onSelectionChanged="#registerVehicleTabSelected" text="Register Vehicle">
+               <content>
+                  <fx:include fx:id="registerVehicle" source="Tab/RegisterVehicleView.fxml" />
+               </content></Tab>
+            <Tab fx:id="manageReceiptTab" closable="false" onSelectionChanged="#manageReceiptTabSelected" text="Manage Receipt">
+               <content>
+                  <fx:include fx:id="receipt" source="Tab/ReceiptView.fxml" />
+               </content></Tab>
+            <Tab closable="false" text="Display Carpark">
+               <content>
+                  <fx:include fx:id="carpark" source="Tab/CarparkView.fxml" />
+               </content></Tab>
+            <Tab fx:id="manageGarageAttendantTab" closable="false" text="Manage Garage Attendant">
+               <content>
+                  <fx:include fx:id="attendantManager" source="Tab/AttendantManagerView.fxml" />
+               </content></Tab>
+         </tabs>
+      </TabPane>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" layoutY="561.0" prefHeight="39.0" prefWidth="800.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#loadLoginPage" text="Back to Login Page" />
+            <Button mnemonicParsing="false" onAction="#printStatusInConsole" text="Print status in Console" />
+            <Button mnemonicParsing="false" onAction="#exitApplication" text="Exit" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

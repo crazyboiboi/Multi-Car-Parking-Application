@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="registerVehicle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.dcs.mcp.GUI.controller.RegisterVehicleController">
+   <children>
+      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="521.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="100.0" prefWidth="250.0" spacing="10.0">
+               <children>
+                  <Label text="License Plate Number" />
+                  <TextField fx:id="licensePlateNumberTextField" prefHeight="31.0" prefWidth="225.0" promptText="e.g. KZ66 ZYT" />
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" fillWidth="false" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="250.0" spacing="10.0">
+               <children>
+                  <Label text="Vehicle Type" />
+                  <ChoiceBox fx:id="vehicleTypeChoiceBox" prefHeight="31.0" prefWidth="225.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="250.0" spacing="20.0">
+               <children>
+                  <Label text="Disabled" />
+                  <RadioButton fx:id="yesRadioButton" mnemonicParsing="false" text="Yes" />
+                  <RadioButton fx:id="noRadioButton" mnemonicParsing="false" text="No" />
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="158.0" prefWidth="250.0" spacing="15.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#confirmRegister" text="Confirm" />
+                  <TextArea fx:id="vehicleRegisterTextArea" editable="false" prefHeight="65.0" prefWidth="200.0" />
+                  <Button fx:id="registerVehicleButton" alignment="CENTER" disable="true" layoutX="98.0" layoutY="10.0" mnemonicParsing="false" onAction="#registerVehicle" text="Register" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

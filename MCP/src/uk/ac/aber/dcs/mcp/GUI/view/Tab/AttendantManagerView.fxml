@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="attendantManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.dcs.mcp.GUI.controller.AttendantManagerController">
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" layoutX="10.0" layoutY="10.0" prefHeight="521.0" prefWidth="760.0" spacing="10.0">
+         <children>
+            <TableView fx:id="garageAttendantTable" prefHeight="275.0" prefWidth="525.0">
+               <columns>
+                  <TableColumn fx:id="nameColumn" prefWidth="275.0" text="Name" />
+                  <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+                  <TableColumn fx:id="vehicleColumn" prefWidth="149.0" text="Vehicle-in-charge" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="525.0" spacing="10.0">
+               <children>
+                  <Label text="Name" />
+                  <TextField fx:id="nameTextField" />
+                  <Button layoutX="531.0" layoutY="10.0" mnemonicParsing="false" onAction="#addAttendant" text="Add" />
+                  <Button layoutX="569.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteAttendant" text="Delete" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="525.0" spacing="10.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#setStatusToAvailable" prefHeight="30.0" prefWidth="125.0" text="Set to Available" />
+                  <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#setStatusToBusy" prefHeight="30.0" prefWidth="125.0" text="Set to Busy" />
+                  <Button alignment="CENTER" layoutX="445.0" layoutY="10.0" mnemonicParsing="false" onAction="#setStatusToOff" prefHeight="30.0" prefWidth="125.0" text="Set to Off" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
