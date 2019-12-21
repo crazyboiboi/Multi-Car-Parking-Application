@@ -22,7 +22,7 @@ Code is written in Java version 11.0.2 using IntelliJ IDEA
 
 ## Running the application
 1) You can clone the repository using:
-- clone/Download button and download the files as zip. Extract it after and open it in Unity.
+- clone/Download button and download the files as zip. Extract it after and open it in IntelliJ.
 - cloning the repository locally: 
 ```bash
 git clone https://github.com/crazyboiboi/Multi-Car-Parking-Application.git
